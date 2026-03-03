@@ -2,33 +2,33 @@
 
 A RESTful API for managing songs built using Spring Boot and MySQL.
 
-## 🚀 Features
+## Features
 - Create, read, update, and delete songs (CRUD)
 - Search songs by artist and genre
 - Find songs by name, artist, or genre
 - Layered architecture (Controller -> Service -> Repository)
 
-## �� Technologies
+## Technologies
 - Java
 - Spring Boot
 - Spring Data JPA
 - MySQL
 - Maven (Wrapper included)
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 src/main/java/org/hartford/songrestapi/
-├── controller    # REST controllers
-├── service       # Service layer
-├── repository    # Repository layer
-└── entity        # JPA entities
+|-- controller    # REST controllers
+|-- service       # Service layer
+|-- repository    # Repository layer
+`-- entity        # JPA entities
 
 src/main/resources/
-└── application.properties   # App & database configuration
+`-- application.properties   # App and database configuration
 ```
 
-## ⚙️ Database Configuration
+## Database Configuration
 
 Update `src/main/resources/application.properties` with your MySQL credentials:
 
@@ -46,9 +46,9 @@ Make sure:
 - MySQL is running
 - Database `song_db` is created
 
-## 📌 API Endpoints
+## API Endpoints
 
-### ➕ Create Song
+### Create Song
 - **Method:** `POST`
 - **Path:** `/songs`
 
@@ -62,45 +62,45 @@ Make sure:
 }
 ```
 
-### 📄 Get All Songs
+### Get All Songs
 - **Method:** `GET`
 - **Path:** `/songs`
 
-### 🔍 Get Song by ID
+### Get Song by ID
 - **Method:** `GET`
 - **Path:** `/songs/{id}`
 
 Example:
 - `GET /songs/1`
 
-### ✏️ Update Song
+### Update Song
 - **Method:** `PUT`
 - **Path:** `/songs/{id}`
 
-### ❌ Delete Song
+### Delete Song
 - **Method:** `DELETE`
 - **Path:** `/songs/{id}`
 
-### 🔎 Search by Artist and Genre
+### Search by Artist and Genre
 - **Method:** `GET`
 - **Path:** `/songs/search?artist=ArtistName&genre=GenreName`
 
 Example:
 - `/songs/search?artist=Arijit&genre=Romantic`
 
-### 🎵 Find by Name
+### Find by Name
 - **Method:** `GET`
 - **Path:** `/songs/name/{name}`
 
-### 🎤 Find by Artist
+### Find by Artist
 - **Method:** `GET`
 - **Path:** `/songs/artist/{artist}`
 
-### 🎼 Find by Genre
+### Find by Genre
 - **Method:** `GET`
 - **Path:** `/songs/genre/{genre}`
 
-## ▶️ Running the Application
+## Running the Application
 
 ### 1) Clone the repository
 
